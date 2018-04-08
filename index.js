@@ -24,8 +24,14 @@ const db = require("./models/db.js");
 //执行注册，Ajax服务
 app.post("/api/register", router.resigter);     
 //执行登录，Ajax服务
-app.post("/api/login", router.login);     
+app.post("/api/login", router.login);  
 
+// 查询个人信息
+app.post("/api/searchuser", router.searchUserInfo); 
+// 修改个人信息       
+app.post("/api/updateuser", router.updateUserInfo);     
+
+ 
 // 监听端口
 app.listen(3000);
 

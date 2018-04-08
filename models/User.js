@@ -6,8 +6,12 @@ const mongoose = require('mongoose');
 // "uId" : Number, 用户id
 const userSchema = new mongoose.Schema({
     "username"  : String,
-    "password" : Number,
+    "password" : String,
     "uId" : Number,
+    "nickname":String,
+    "signature":String,
+ 
+    "loverId":String
    
 });
 //索引
