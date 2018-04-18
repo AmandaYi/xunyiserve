@@ -151,3 +151,27 @@ exports.updateUserInfo = (req, res, next) => {
 
 
 
+
+
+// 聊天功能来源于socket
+exports.sendMsg= (msg) => {
+    console.log(msg);
+    // saveChatMsg(msg,()=>{});
+    // saveChatMsg(msg, () => {
+    //   io.to(msg.roomId).emit('chat-msg', msg)
+    //   // 分割聊天消息，判断是否与机器人聊天
+    //   const msgArr = msg.text.split(' ')
+    //   const robotParam = {
+    //     userId: msg.userId,
+    //     roomId: msg.roomId || null,
+    //     timeStamp: msg.timeStamp + 1 || null,
+    //     text: msgArr[1]
+    //   }
+    //   if (msgArr[0] === '@小美') {
+    //     getRobotMsg(robotParam, (robotmsg) => {
+    //       saveChatMsg(robotmsg)
+    //       io.to(msg.roomId).emit('chat-msg', robotmsg)
+    //     })
+    //   }
+    // })
+  }
